@@ -1,0 +1,226 @@
+/*------------------------------------*\
+  #Global Rules
+\*------------------------------------*/
+
+html {
+    font-size: 65.2%;
+}
+
+*::before,
+*::after,
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-violet: hsl(256, 26%, 20%);
+    --grayish-blue: hsl(216, 30%, 68%);
+    --very-dark-violet: hsl(270,9%, 17%);
+    --dark-grayish-violet: hsl(273, 4%, 51%);
+    --very-light-gray: hsl(0, 0%, 98%);
+}
+
+img {
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--very-light-gray);
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-weight: 400;
+    background-color: var(--very-light-gray);
+}
+
+
+
+
+
+/*------------------------------------*\
+  #Navigation & Hero Page Section
+\*------------------------------------*/
+
+header {
+    background-color: var(--very-light-gray);
+    padding: 2.0rem 2.2rem;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-page {
+    background-color: var(--dark-violet);
+    color: var(--very-light-gray);
+    min-height: 100vh;
+    padding-bottom: 3.8rem;
+}
+
+.hero-page__content {
+    text-align: center;
+    margin: 4.5rem 2.5rem 0;
+}
+
+h1 {
+    font-size: 3.5rem;
+    line-height: 0.8;
+    margin-bottom: 1.8rem;
+}
+
+.cta {
+    border: 0.1rem solid var(--very-light-gray);
+    padding: 0.8rem 1.6rem;
+    margin-top: 2.5rem;
+    text-transform: uppercase;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #Selling Points Section
+\*------------------------------------*/
+
+.selling-points {
+    margin: 8.5rem 2.2rem;
+    text-align: center;
+}
+
+.divider {
+    height: 0.1rem;
+    width: 12.5rem;
+    background-color: var(--very-dark-violet);
+    margin: 0 auto 2.5rem;
+}
+
+.selling-points__groups {
+    display: flex;
+    flex-direction: column;
+    gap: 2.8rem;
+}
+
+h2 {
+    font-size: 3.0rem;
+    margin-bottom: 3.0rem;
+    line-height: 0.8;
+}
+
+.icon-tag {
+    margin-bottom: 1.8rem;
+}
+
+h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1.0rem;
+}
+
+article p {
+    color: var(--grayish-blue);
+}
+
+
+
+
+
+/*------------------------------------*\
+  #Learn More Section
+\*------------------------------------*/
+
+.learn-more {
+    background-color: var(--dark-violet);
+    background-image: url('images/bg-pattern-intro-right-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: contain;
+    margin: 8.5rem 2.2rem;
+    text-align: center;
+    padding: 3.5rem;
+    height: 30.5rem;
+    display: grid;
+    place-content: center;
+    color: var(--very-light-gray);
+}
+
+.learn-more h2 {
+    margin-bottom: 2.5rem;
+}
+
+.learn-more .cta {
+    width: fit-content;
+    justify-self: center;
+    margin-top: 0;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #Footer Section
+\*------------------------------------*/
+
+footer {
+    background-image: url('images/bg-pattern-footer-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    text-align: center;
+    padding: 5.5rem 2.2rem;
+}
+
+h4 {
+    font-size: 2.0rem;
+    color: var(--dark-grayish-violet);
+    text-transform: uppercase;
+}
+
+footer a {
+    color: var(--very-dark-violet);
+    text-transform: uppercase;
+}
+
+.social-handles {
+    margin: 2.2rem auto 2.5rem;
+    display: flex;
+    gap: 1.0rem;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.1rem solid var(--grayish-blue);
+    padding-bottom: 2.5rem;
+}
+
+.site-map {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+h4 {
+    margin-bottom: 2.5rem;
+}
