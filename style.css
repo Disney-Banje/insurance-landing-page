@@ -2,6 +2,8 @@
   #Global Rules
 \*------------------------------------*/
 
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
 html {
     font-size: 65.2%;
 }
@@ -47,6 +49,19 @@ body {
     line-height: 1.5;
     font-weight: 400;
     background-color: var(--very-light-gray);
+    font-family: "Karla", sans-serif;
+}
+
+h1, 
+h2,
+h3 {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+}
+
+.container {
+    max-width: 106.05rem;
+    margin: 0 auto;
 }
 
 
@@ -68,6 +83,31 @@ header {
     align-items: center;
 }
 
+nav {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2.0rem;
+}
+
+nav li a {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: var(--dark-grayish-violet);
+}
+
+nav .cta--navigation {
+    color: var(--very-dark-violet);
+    border: 0.2rem solid var(--dark-violet);
+    font-weight: 700;
+    margin: 0;
+}
+
 .hero-page {
     background-color: var(--dark-violet);
     color: var(--very-light-gray);
@@ -86,11 +126,16 @@ h1 {
     margin-bottom: 1.8rem;
 }
 
+.hero-page__content p {
+    font-size: 1.4rem;
+}
+
 .cta {
-    border: 0.1rem solid var(--very-light-gray);
+    border: 0.2rem solid var(--very-light-gray);
     padding: 0.8rem 1.6rem;
     margin-top: 2.5rem;
     text-transform: uppercase;
+    font-weight: 700;
 }
 
 
@@ -115,14 +160,19 @@ h1 {
 
 .selling-points__groups {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 2.8rem;
 }
 
 h2 {
-    font-size: 3.0rem;
-    margin-bottom: 3.0rem;
+    font-size: 3.2rem;
+    margin-bottom: 3.8rem;
     line-height: 0.8;
+}
+
+article {
+    max-width: 31.97rem;
 }
 
 .icon-tag {
@@ -130,7 +180,7 @@ h2 {
 }
 
 h3 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     margin-bottom: 1.0rem;
 }
 
@@ -146,18 +196,18 @@ article p {
   #Learn More Section
 \*------------------------------------*/
 
+.third-group {
+    display: flex;
+    margin: 8.5rem 2.2rem;
+}
+
 .learn-more {
     background-color: var(--dark-violet);
     background-image: url('images/bg-pattern-intro-right-mobile.svg');
     background-repeat: no-repeat;
     background-position: bottom right;
-    background-size: contain;
-    margin: 8.5rem 2.2rem;
     text-align: center;
     padding: 3.5rem;
-    height: 30.5rem;
-    display: grid;
-    place-content: center;
     color: var(--very-light-gray);
 }
 
@@ -186,17 +236,27 @@ footer {
     background-size: contain;
     text-align: center;
     padding: 5.5rem 2.2rem;
+    font-size: 1.5rem;
 }
 
 h4 {
-    font-size: 2.0rem;
+    font-size: 1.7rem;
     color: var(--dark-grayish-violet);
     text-transform: uppercase;
+    font-family: "Karla", sans-serif;
+    font-weight: 400;
 }
 
 footer a {
     color: var(--very-dark-violet);
     text-transform: uppercase;
+    font-weight: 700;
+}
+
+.page-socials {
+    border-bottom: 0.1rem solid var(--grayish-blue);
+    padding-bottom: 2.5rem;
+    margin-bottom: 3.5rem;
 }
 
 .social-handles {
@@ -205,8 +265,6 @@ footer a {
     gap: 1.0rem;
     justify-content: center;
     align-items: center;
-    border-bottom: 0.1rem solid var(--grayish-blue);
-    padding-bottom: 2.5rem;
 }
 
 .site-map {
@@ -223,4 +281,62 @@ ul {
 
 h4 {
     margin-bottom: 2.5rem;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #Media Queries
+\*------------------------------------*/
+
+@media screen and (min-width: 768px) {
+    .navigation__dropdown-menu {
+        display: none;
+    }
+
+    nav {
+        display: block;
+    }
+
+    .selling-points {
+        text-align: start;
+    }
+
+    .divider {
+        margin-left: 0;
+    }
+
+    .learn-more {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 22.5rem;
+        text-align: start;
+    }
+
+    .learn-more h2 {
+        width: 25.5rem;
+        margin: 0;
+    }
+
+    .page-socials {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .social-handles {
+        justify-content: flex-end;
+        gap: 2.2rem;
+        margin: 0;
+    }
+
+    .site-map {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        text-align: start;
+    }
+
 }
