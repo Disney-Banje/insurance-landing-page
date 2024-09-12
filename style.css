@@ -26,6 +26,7 @@ html {
 
 img {
     width: 100%;
+    object-fit: cover;
 }
 
 ul {
@@ -42,13 +43,14 @@ button {
     border: none;
     outline: none;
     color: var(--very-light-gray);
+    cursor: pointer;
 }
 
 body {
     font-size: 1.6rem;
     line-height: 1.5;
     font-weight: 400;
-    background-color: var(--very-light-gray);
+    background-color: white;
     font-family: "Karla", sans-serif;
 }
 
@@ -108,16 +110,42 @@ nav .cta--navigation {
     margin: 0;
 }
 
+.motif-right, 
+.motif-left {
+    position: absolute;
+}
+
+.motif-left {
+    left: 0;
+    bottom: 20.5rem;
+    z-index: 10;
+}
+
+.motif-right {
+    right: 0;
+    bottom: -20.8rem;
+}
+
+.hero-page .container picture {
+    position: relative;
+    z-index: 60;
+}
+
 .hero-page {
     background-color: var(--dark-violet);
     color: var(--very-light-gray);
     min-height: 100vh;
-    padding-bottom: 3.8rem;
+    padding-bottom: 7.8rem;
+    position: relative;
 }
 
 .hero-page__content {
     text-align: center;
-    margin: 4.5rem 2.5rem 0;
+    margin: 4.5rem 2.2rem 0;
+}
+
+.hero-page__content .divider {
+    display: none;
 }
 
 h1 {
@@ -155,13 +183,14 @@ h1 {
     height: 0.1rem;
     width: 12.5rem;
     background-color: var(--very-dark-violet);
-    margin: 0 auto 2.5rem;
+    margin: 0 auto 4.5rem;
 }
 
 .selling-points__groups {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 2.8rem;
 }
 
@@ -197,8 +226,7 @@ article p {
 \*------------------------------------*/
 
 .third-group {
-    display: flex;
-    margin: 8.5rem 2.2rem;
+    padding: 5.8rem 2.2rem 8.8rem;
 }
 
 .learn-more {
@@ -207,7 +235,7 @@ article p {
     background-repeat: no-repeat;
     background-position: bottom right;
     text-align: center;
-    padding: 3.5rem;
+    padding: 3.5rem 2.2rem;
     color: var(--very-light-gray);
 }
 
@@ -230,10 +258,10 @@ article p {
 \*------------------------------------*/
 
 footer {
+    background-color: var(--very-light-gray);
     background-image: url('images/bg-pattern-footer-mobile.svg');
     background-repeat: no-repeat;
-    background-position: top;
-    background-size: contain;
+    background-position: top left;
     text-align: center;
     padding: 5.5rem 2.2rem;
     font-size: 1.5rem;
@@ -292,6 +320,64 @@ h4 {
 \*------------------------------------*/
 
 @media screen and (min-width: 768px) {
+
+    header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .hero-page {
+        height: 100vh;
+        padding: 0 2.2rem;
+        position: relative;
+    }
+
+    .hero-page .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+    }
+
+    .motif-right {
+        top: 5.5rem;
+        z-index: 80;
+    }
+
+    .motif-left {
+        bottom: -25.5rem;
+    }
+
+    .hero-page__content {
+        text-align: start;
+        max-width: 48.5rem;
+        margin-left: 0;
+        position: relative;
+        z-index: 95;
+    }
+
+    .hero-page__content .divider {
+        display: block;
+        background-color: var(--very-light-gray);
+    }
+
+    h1 {
+        font-size: 5.8rem;
+    }
+
+    .hero-page .container picture {
+        /* display: none; */
+        position: absolute;
+        right: 0;
+        bottom: -12.5rem;
+        width: 35.5rem;
+        aspect-ratio: 4 / 5;
+    }
+
     .navigation__dropdown-menu {
         display: none;
     }
@@ -302,6 +388,15 @@ h4 {
 
     .selling-points {
         text-align: start;
+        padding-top: 12.5rem;
+    }
+
+    h2 {
+        font-size: 4.8rem;
+    }
+
+    .selling-points__groups {
+        justify-content: flex-start;
     }
 
     .divider {
@@ -309,6 +404,7 @@ h4 {
     }
 
     .learn-more {
+        background-image: url('images/bg-pattern-intro-right-desktop.svg');
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -317,8 +413,12 @@ h4 {
     }
 
     .learn-more h2 {
-        width: 25.5rem;
+        max-width: 42.5rem;
         margin: 0;
+    }
+
+    footer {
+        background-image: url('images/bg-pattern-footer-desktop.svg');
     }
 
     .page-socials {
@@ -339,4 +439,12 @@ h4 {
         text-align: start;
     }
 
+}
+
+@media screen and (min-width: 1024px) {
+
+    .hero-page .container picture {
+        bottom: -15.5rem;
+        width: 47.8rem;
+    }
 }
